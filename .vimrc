@@ -4,7 +4,7 @@ set numberwidth=1
 set clipboard=unnamed
 syntax enable
 set showcmd
-set ruler
+set ruler 
 set cursorline
 set encoding=utf-8
 set showmatch
@@ -13,22 +13,7 @@ set relativenumber
 set laststatus=2
 set noshowmode
 
-call plug#begin('~/.vim/plugged')
-
-" Themes
-Plug 'morhetz/gruvbox'
-" IDE
-Plug 'easymotion/vim-easymotion'
-" Folder explorer
-Plug 'scrooloose/nerdtree'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'HerringtonDarkholme/yats.vim'
-" Pretty js coding
-Plug 'yuezk/vim-js'
-Plug 'maxmellon/vim-jsx-pretty'
-
-call plug#end()
+so ~/.vim/plugins.vim
 
 colorscheme gruvbox
 let g:gruvbox_contrast_dark = "hard"
