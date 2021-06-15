@@ -47,14 +47,14 @@ set nobackup
 set nowritebackup
 
 " Give more space for displaying messages.
-set cmdheight=1
+set cmdheight=2
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
 set updatetime=300
 
 " Don't pass messages to |ins-completion-menu|.
-set shortmess+=c
+"set shortmess+=c
 
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
@@ -80,7 +80,7 @@ function! s:check_back_space() abort
 endfunction
 
 " Use <c-space> to trigger completion.
-if has('nvim')
+if has('nvim') 
   inoremap <silent><expr> <c-space> coc#refresh()
 else
   inoremap <silent><expr> <c-@> coc#refresh()
@@ -95,3 +95,15 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 " ******************* END COC CONFIG ********************
+
+" Vim find files config 
+"let g:find_files_findprg = 'find $d ! -type d $*'
+let g:find_files_findprg = 'fdfind --hidden $* $d'
+set wildmenu
+set wildmode=longest:full,full
+
+" Java autocomplete configuration
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+" To enable smart (trying to guess import option) inserting class imports with F4, add:
+nmap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+imap <F4> <Plug>(JavaComplete-Imports-AddSmart)

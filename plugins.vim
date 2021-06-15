@@ -14,18 +14,25 @@ Plug 'easymotion/vim-easymotion'
 
 " Folder explorer
 Plug 'scrooloose/nerdtree'
+" Find files
+Plug 'samoshkin/vim-find-files'
 
 " Autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Autocomplete for Java
+Plug 'artur-shaik/vim-javacomplete2' 
 
 " Pretty js coding
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
 
+" Pretty XML
+" Plug 'othree/xml.vim'
+  
 " Status bar
-Plug 'maximbaz/lightline-ale'
-Plug 'itchyny/lightline.vim'
-
+"Plug 'maximbaz/lightline-ale'
+"Plug 'itchyny/lightline.vim'
+    
 " tmux
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'benmills/vimux'
@@ -36,5 +43,7 @@ Plug 'sheerun/vim-polyglot'
 
 " git
 Plug 'tpope/vim-fugitive'
+
+"Plug 'airblade/vim-rooter'
 
 call plug#end()
