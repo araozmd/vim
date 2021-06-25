@@ -15,7 +15,10 @@ Plug 'easymotion/vim-easymotion'
 " Folder explorer
 Plug 'scrooloose/nerdtree'
 " Find files
-Plug 'samoshkin/vim-find-files'
+" Plug 'samoshkin/vim-find-files'
+Plug 'wincent/command-t', {
+    \   'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
+    \ }
 
 " Autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}

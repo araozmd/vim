@@ -13,5 +13,5 @@ nnoremap <Leader>< 10<C-w><
 
 " git
 nnoremap <Leader>G :G<cr>
-nnoremap <Leader>gp :Gpush<cr>
-nnoremap <Leader>gl :Gpull<cr>
+nnoremap <Leader>gp :Git push<cr>
+nnoremap <Leader>gl :Git pull<cr>
