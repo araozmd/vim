@@ -33,8 +33,8 @@ Plug 'maxmellon/vim-jsx-pretty'
 " Plug 'othree/xml.vim'
   
 " Status bar
-"Plug 'maximbaz/lightline-ale'
-"Plug 'itchyny/lightline.vim'
+Plug 'maximbaz/lightline-ale'
+Plug 'itchyny/lightline.vim'
     
 " tmux
 Plug 'christoomey/vim-tmux-navigator'
