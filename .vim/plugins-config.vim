@@ -1,6 +1,17 @@
+" Provider configurations
+if has('python')
+	set pyx=2
+elseif has('python3')
+	set pyx=3
+endif
+
+let g:perl_host_prog='/usr/bin/perl'
+
 " Themes
-colorscheme gruvbox
+let g:gruvbox_vert_split = 'green'
 let g:gruvbox_contrast_dark = "hard"
+colorscheme gruvbox
+" colorscheme onedark
 
 " HTML, JSX
 let g:closetag_filenames = '*.html,*.js,*.jsx,*.ts,*.tsx'
@@ -99,10 +110,16 @@ nmap <leader>f  <Plug>(coc-format-selected)
 " Vim find files config 
 " let g:find_files_findprg = 'find $d ! -type d $*'
 " let g:find_files_findprg = 'fdfind --hidden $* $d'
-set wildignore+=*/node_modules
+set wildignore+=*/node_modules,*/target,*/dist
 
 " Java autocomplete configuration
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
-" To enable smart (trying to guess import option) inserting class imports with F4, add:
-nmap <F4> <Plug>(JavaComplete-Imports-AddSmart)
-imap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+let g:JavaComplete_Home = $HOME . '/.vim/plugged/vim-javacomplete2'
+let $CLASSPATH .= '.:' . $HOME . '/.vim/plugged/vim-javacomplete2/lib/javavi/target/classes'
+let g:JavaComplete_SourcesPath = $HOME . '/projects/libera/radian/dian-templates'
+" ******* Git ** vim-gitgutter
+let g:gitgutter_sign_added = ' '
+let g:gitgutter_sign_modified = ' '
+let g:gitgutter_sign_removed = ' '
+let g:gitgutter_sign_removed_first_line = ' '
+let g:gitgutter_sign_modified_removed = ' '

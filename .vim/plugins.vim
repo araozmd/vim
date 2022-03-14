@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 " Themes
+" Plug 'joshdick/onedark.vim'
 Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
 
@@ -16,9 +17,11 @@ Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 " Find files
 " Plug 'samoshkin/vim-find-files'
-Plug 'wincent/command-t', {
+ Plug 'wincent/command-t', {
     \   'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
     \ }
+" Find inside files
+Plug 'mileszs/ack.vim'
 
 " Autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -46,7 +49,10 @@ Plug 'sheerun/vim-polyglot'
 
 " git
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-rooter'
 
-"Plug 'airblade/vim-rooter'
+" Persist vim sessions
+Plug 'tpope/vim-obsession'
 
 call plug#end()
